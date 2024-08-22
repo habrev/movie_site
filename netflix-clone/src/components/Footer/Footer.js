@@ -1,8 +1,8 @@
 import React from 'react'
-import  "./footer.css"
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import  "./footer.css"
 
 const footer = () => {
   return (
@@ -45,8 +45,8 @@ const footer = () => {
           </div>
         </div>
         <div className='service_code'>
-          service code
-        </div>
+          service code 
+          </div>
         <div className='copy-write'>
           &copy; 1997-2024 Netflix, Inc.
         </div>
