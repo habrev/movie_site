@@ -1,6 +1,7 @@
 import React, {useEffect, useState } from 'react';
 import axios from "../../utils/axios";
 import requests from "../../utils/requests";
+import "./banner.css"
 
 const Banner = () => {
     const [movie, setMovie]= useState({});
@@ -16,10 +17,14 @@ const Banner = () => {
             
             }
             catch(error){
-                console.log("error", error);
+                console.log("the erroris sami:", error);
             }
         })();
     }, []);
+
+    function truncate(str,n) {
+        return str?.length > n ? str.substr(0, n-1) + '... ' :str;
+    }
   return (
     <div 
         className='banner'
@@ -40,7 +45,7 @@ const Banner = () => {
                 <button className='banner_button'>my list</button>
 
             </div>
-            {/* <h1 className='banner_description'>{truncate(movie?.overview, 150)}</h1> */}
+            <h1 className='banner_description'>{truncate(movie?.overview, 150)}</h1>
         </div>
         <div className='banner_fadebottom'>
 
